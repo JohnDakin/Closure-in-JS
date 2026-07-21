@@ -74,7 +74,7 @@ function dealingWithBigData(){
   let bigData = new Array(10000000).fill('*');
 
   return function (){
-    console.log(bigData[3]);
+    console.log(bigData[3]); //this will always reffer to the bigData array even after the outer function has executed therefore garbage collector will not be able to free up the memory used by bigData array and this will lead to memory leak
   }
 }
 
