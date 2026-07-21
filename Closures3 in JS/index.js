@@ -100,8 +100,8 @@ apiFunction("https://jsonplaceholder.typicode.com/todos/1");
 
 console.log("I am here");
 */
-
-for(var i = 0; i < 3; i++){
+var i; // var keyword is function scoped and it is hoisted to the top of the function or global scope. Therefore, it will be accessible outside the for loop and its value will be 3 after the loop ends.
+for(i = 0; i < 3; i++){
   setTimeout(function (){
     console.log(i);
   }, 1000 * i);
