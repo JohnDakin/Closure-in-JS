@@ -43,7 +43,7 @@ var timer = stopWatch();
 for (let i = 0; i< 100000000; i++){
   Math.random() * 1000000;
 }
-//starttime still knows the current time because of closure
+//startTime still knows the current time because of closure
 timer();
 timer();
 timer();

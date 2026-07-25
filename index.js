@@ -39,3 +39,19 @@ anotherMyNewFunc();
 anotherMyNewFunc();
 anotherMyNewFunc();
 
+
+//recursion in closure
+function outer(){
+  let counter = 0;
+  return function inner(){
+    counter++;
+    console.log(counter);
+    if(counter === 10){
+      return;
+    }
+  inner();
+  }
+}
+
+const result = outer();
+result();
